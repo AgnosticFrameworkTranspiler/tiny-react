@@ -2,7 +2,11 @@ import React from "./react";
 import "./react-dom";
 import Counter from "./counter";
 
-const Hello = ({ name }) => <p>Hello {name}!</p>;
+const Hello = ({ name }) => {
+  console.log("--->", Hello.__props);
+  console.log("--->", Hello.__vNode);
+  return <p>Hello {name}!</p>;
+};
 
 const App = () => (
   <div>
